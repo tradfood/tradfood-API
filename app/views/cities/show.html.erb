@@ -22,6 +22,13 @@
 
 <h1>Recipes</h1>
 
+<%= form_tag do %>
+  <%= select_tag(:difficulty, options_for_select(filter_array['difficulty'], params[:difficulty].to_i ||= 'all')) %>
+  <%= select_tag(:season, options_for_select(filter_array['season'], params[:season] ||= 'all')) %>
+  <%= select_tag(:menu, options_for_select(filter_array['menu'], params[:menu] ||= 'all')) %>
+  <%= submit_tag 'Rechercher' %>
+<% end %>
+
 <ul>
   <% @recipes.each do |recipe| %>
     <li><%= link_to recipe.name.capitalize, recipe_path(slugify(@city.name), slugify(recipe.name)) %></li>

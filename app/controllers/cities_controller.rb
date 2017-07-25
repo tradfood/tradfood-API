@@ -1,5 +1,6 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: :show
+  include CitiesHelper
 
   # GET /cities
   # GET /cities.json
@@ -8,8 +9,26 @@ class CitiesController < ApplicationController
     @highlightCities = @cities.where(:highlight => true)
   end
 
-  # GET /cities/1
-  # GET /cities/1.json
+  # GET /cities/bordeaux
+  # GET /cities/bordeaux.json
+  def filter
+    set_city
+    @recipes = Recipe.where(:city => @city)
+
+    @recipes = @recipes.where(:difficulty => params['difficulty'].to_i) if params['difficulty'] != 'all'
+    @recipes = @recipes.where(:season => params['season']) if params['season'] != 'all'
+    @recipes = @recipes.where(:meal_type => params['menu']) if params['menu'] != 'all'
+
+    puts "=============="
+    puts @city
+    puts @recipes
+    puts "=============="
+
+    render 'show'
+  end
+
+  # POST /cities/bordeaux
+  # POST /cities/bordeaux.json
   def show
     set_recipe
   end
