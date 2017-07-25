@@ -19,3 +19,7 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore local_env file : file which all servers vars
+/config/local_env.yml
+config/local_env.yml
