@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # Rails_admin
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  # Recipe
+  get "/recipes", to: 'recipes#index', as: :recipes
+  get "/recipes/:id", to: 'recipes#show', as: :recipe
+
+  # Cities
+  get "/cities", to: 'cities#index', as: :cities
+  get "/cities/:id", to: 'cities#show', as: :city
 end
