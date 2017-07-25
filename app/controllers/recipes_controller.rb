@@ -1,11 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-
-  # GET /recipes
-  # GET /recipes.json
-  def index
-    @recipes = Recipe.all
-  end
+  before_action :set_recipe, only: :show
 
   # GET /recipes/1
   # GET /recipes/1.json
@@ -15,7 +9,7 @@ class RecipesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
-      @recipe = Recipe.find(params[:id])
+      @recipe = Recipe.where(:name => unslugify(params[:name])).first
     end
-    
+
 end

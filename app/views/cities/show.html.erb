@@ -2,7 +2,7 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @city.name %>
+  <%= @city.name.titleize %>
 </p>
 
 <p>
@@ -19,5 +19,13 @@
   <strong>Publish:</strong>
   <%= @city.publish %>
 </p>
+
+<h1>Recipes</h1>
+
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li><%= link_to recipe.name.capitalize, recipe_path(slugify(@city.name), slugify(recipe.name)) %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Back', cities_path %>
