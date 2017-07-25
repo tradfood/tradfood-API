@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Highlight</th>
+      <th>Publish</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cities.each do |city| %>
+      <tr>
+        <td><%= city.name %></td>
+        <td><%= city.description %></td>
+        <td><%= city.highlight %></td>
+        <td><%= city.publish %></td>
+        <td><%= link_to 'Show', city %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

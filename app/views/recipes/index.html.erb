@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ingredients</th>
+      <th>Recipe</th>
+      <th>Preparation time</th>
+      <th>Cooking time</th>
+      <th>Meal type</th>
+      <th>Difficulty</th>
+      <th>Season</th>
+      <th>Highlight</th>
+      <th>Publish</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.ingredients %></td>
+        <td><%= recipe.recipe %></td>
+        <td><%= recipe.preparation_time %></td>
+        <td><%= recipe.cooking_time %></td>
+        <td><%= recipe.meal_type %></td>
+        <td><%= recipe.difficulty %></td>
+        <td><%= recipe.season %></td>
+        <td><%= recipe.highlight %></td>
+        <td><%= recipe.publish %></td>
+        <td><%= recipe.city %></td>
+        <td><%= link_to 'Show', recipe %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
