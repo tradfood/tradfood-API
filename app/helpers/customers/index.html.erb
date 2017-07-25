@@ -1,0 +1,22 @@
+<section id="customers" class=index>
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="title is-1">Clients</h1>
+  <br><br>
+  <% if current_page?(customers_path) %>
+    <h4 class="title is-4">Total clients : <%= @clientsNumber %></h4>
+  <% end %>
+
+  <%= form_tag(customers_search_path, method: "post") do %>
+    <p class="control">
+      <%= text_field_tag :search_bar, "", class: "input is-info" %>
+    </p>
+    <%= submit_tag "Search", class: "button is-primary" %>
+  <% end %>
+
+
+  Clients affichés : <%= @clients.count %>
+
+  <%= render 'customers/partials/list', customers: @customers %>
+
+</section>

@@ -1,0 +1,51 @@
+<section id="customers" class="show">
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="title is-1">Client</h1>
+
+  <table class="table">
+    <tr><td>ID : <%= @client['id'] %></tr></td>
+    <tr><td>Nom : <%= @client['name'] %></tr></td>
+    <tr><td>Statut : <%= @client['status'] %></tr></td>
+    <tr><td>Date de création : <%= @client['formatted_joindate'] %></tr></td>
+  </table>
+  <table class="table">
+    <caption class="title is-4">Adresse principale</caption>
+    <% count = 0 %>
+    <% for i in 1..4 %>
+      <% if @address["part#{i}"] != "" %>
+        <tr><td><%= @address["part#{i}"] %></td></tr>
+      <% else %>
+        <% count += 1 %>
+        <% if count == 4 %>
+          <tr><td>Aucune adresse postale n'est référencée</td></tr>
+        <% end %>
+      <% end %>
+    <% end %>
+    <tr><td><%= @address['zip'] if self != "" %> <%= @address['town'] if self != "" %></td></tr>
+    <tr><td><%= @address['countryname'] if self != "" %></td></tr>
+  </table>
+
+  <table class="table is-bordered">
+    <caption class="title is-3">BAT</caption>
+    <thead>
+      <th>Maquette</th>
+      <th>Statut</th>
+    </thead>
+    <% @sketches.each do |sketch| %>
+      <tr>
+        <td>
+          <%= link_to sketch_path(sketch) do %>
+            <%= sketch %>
+          <% end %>
+        </td>
+        <td>
+          <%= state?(sketch.state) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br>
+  <%= link_to 'Ajouter une maquette', new_sketch_path(:client => @client['id']) %>
+
+</section>
