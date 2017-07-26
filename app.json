@@ -1,0 +1,14 @@
+{
+  "name": "TradFood",
+  "description": "App about local'recipes, developped @ IUT Bordeaux Montaigne",
+  "keywords": [
+    "dokku",
+    "rails",
+    "tradfood.fr"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}
