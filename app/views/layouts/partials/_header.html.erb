@@ -1,0 +1,14 @@
+<% if current_page?(root_path) %>
+  <header id="home">
+<% else %>
+  <header>
+<% end %>
+   <div class="row">
+    <div class="logo"><a href="/"><%= image_tag image_path('logo-orange.svg'), :class => "logo__img column-center" %></a></div>
+    <ul class="menu">
+      <li><%= link_to root_path do %>Accueil<% end %></li>
+      <% unless (current_page?('/') || current_page?('/about') || @home == true) %><li class="active"><% else %><li><% end %><%= link_to city_path('bordeaux') do %>Villes<% end %></li>
+      <% if current_page?('/about') %><li class="active"><% else %><li><% end %><a href="/about">A propos</a></li>
+    </ul>
+  </div>
+</header>
