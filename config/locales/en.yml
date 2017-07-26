@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  admin:
+    actions:
+      show_in_app_custom:
+        menu: "Show in app"

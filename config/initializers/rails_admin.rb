@@ -1,4 +1,12 @@
+## Include application Actions
+# Show in app : link depend on slug
+require Rails.root.join('lib', 'rails_admin', 'show_in_app_custom.rb')
+RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::ShowInAppCustom)
+
+
 RailsAdmin.config do |config|
+
+  config.main_app_name { ['TradFood', 'Admin'] }
 
   ### Popular gems integration
 
@@ -23,29 +31,34 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar true
 
+  custom_model_array = [City, Recipe]
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
-    new
     export
     bulk_delete
     show
-    edit
     delete
-    show_in_app
+    new
+    edit
+
+    show_in_app do
+      except custom_model_array
+    end
+    show_in_app_custom do
+      only custom_model_array
+    end
 
     ## With an audit adapter, you can add:
     # history_index
     # history_show
   end
 
-  RailsAdmin.config do |config|
-    config.authorize_with do
-      authenticate_or_request_with_http_basic('Site Message') do |username, password|
-        username == ENV["ADMIN_LOGIN"] && password == ENV["ADMIN_PASSWORD"]
-      end
+  config.authorize_with do
+    authenticate_or_request_with_http_basic('Site Message') do |username, password|
+      username == ENV["ADMIN_LOGIN"] && password == ENV["ADMIN_PASSWORD"]
     end
-    config.main_app_name { ['TradFood', 'Admin'] }
   end
 
 end
