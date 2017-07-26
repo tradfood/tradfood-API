@@ -37,7 +37,7 @@
     <div class="container">
 			<% @recipes.where(:highlight => true).limit(3).each do |recipe| %>
 				<%= link_to slugify(recipe.name) do %>
-					<div class="bloc">
+					<div class="bloc" style="background-image: url(<%= recipe.image_url %>)">
 						<div class="on-hover">
               <div class="infos">
                 <ul>
@@ -55,7 +55,7 @@
     <div class="container">
 			<% @recipes.limit(12).reverse.each do |recipe| %>
 				<%= link_to slugify(recipe.name) do %>
-					<div class="bloc">
+					<div class="bloc" style="background-image: url(<%= recipe.image_url %>)">
 						<div class="on-hover">
               <span><em><%= recipe.name %></em></span>
 						</div>
