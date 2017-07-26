@@ -1,3 +1,66 @@
-// Place all the styles related to the Recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#recipe {
+  h1 {
+    font-size: 13em;
+    font-family: AbrilFatface-Regular;
+    text-align: center;
+    text-transform: capitalize;
+    color: transparentize(#FF9C7B, .83);
+  }
+  .container {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    margin: -3em auto 4em;
+    background-color: #FFF;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    img {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+      width: calc(3.5*(100%/8));
+      height: auto;
+      object-fit: cover;
+    }
+    .right {
+      padding: 1.5em 2em;
+      width: calc(4.5*(100%/8));
+      h2 {
+        font-size: 1.8em;
+        font-family: Muli-Regular;
+        margin-bottom: .8em;
+      }
+      ul {
+        margin-left: 1em;
+        li {
+          margin: .7em 0;
+          list-style: initial;
+        }
+      }
+      hr {
+        margin: 2.5em 0 1em;
+        background-color: #FF9C7B;
+        height: 2px;
+        border: none;
+      }
+      p {
+        margin-bottom: .7em;
+      }
+    }
+  }
+  @media only screen and (max-width : 900px) {
+    h1 {
+      font-size: 5em;
+      transform: translateY(-.8em);
+    }
+    .container {
+      flex-wrap: wrap;
+      width: 85%;
+      img {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+        padding: 1em 2em;
+      }
+    }
+  }
+}

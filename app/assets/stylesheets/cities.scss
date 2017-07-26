@@ -1,3 +1,141 @@
 // Place all the styles related to the Cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Lot of city CSS is from Homepage CSS / Here : overwriting
+.city {
+  .head {
+    height: 250px;
+    h1 {
+      margin-left: 17%;
+      margin-top: 6em;
+      font-size: 1.6em;
+      font-weight: 600;
+    }
+    @media only screen and (max-width : 750px) {
+      h1 {
+        margin-top: 4.2em;
+      }
+    }
+  }
+  h2 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: -1;
+    font-size: calc(130vw/7);
+    font-family: Abril Fatface;
+    color: rgb(255, 156, 123);
+    opacity: .57;
+  }
+  .recipes {
+    .container {
+      width: 48%;
+      margin: 2em auto 0;
+      transform: translateX(-1.8em);
+      .card {
+        width: 100%;
+        display: inline-block;
+        background: #FFF;
+        padding: 1.5em 1.8em 1.3em;
+        box-shadow: 0 2px 13px rgba(0,0,0,.5);
+        font-family: Hind, open-sans, sans-serif;
+        margin: 3em 0;
+        transition: transform .3s;
+        .content {
+          min-height: 17em;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .infos {
+          position: relative;
+          width: 48%;
+          text-align: center;
+          padding: .8em .7em 2.3em 1em;
+          background-color: #FFF;
+          margin-top: 6.95em;
+          float: right;
+          h3 {
+            font-weigth: 500;
+            color: #424242;
+            text-align: center;
+            font-size: 2em;
+            margin: .1em 0 .2em;
+          }
+          .details {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 2.5em;
+            b {
+              font-weight: 400;
+              display: inline-block;
+            }
+            .icon {
+              display: inline-block;
+              height: 1em;
+              width: 1em;
+              margin-left: 20px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              &.star {
+                background-image: url("https://s3.eu-central-1.amazonaws.com/bastienrobert/codepen/card-tradfood/004-star-1.svg");
+                margin-left: 0;
+              }
+              &.leaf {
+                background-image: url("https://s3.eu-central-1.amazonaws.com/bastienrobert/codepen/card-tradfood/003-leaf.svg");
+              }
+              &.cook {
+                background-image: url("https://s3.eu-central-1.amazonaws.com/bastienrobert/codepen/card-tradfood/002-food.svg");
+              }
+            }
+          }
+          a {
+            font-size: 1.3em;
+            color: #434343;
+            text-decoration: none;
+            padding: .5em .75em;
+            border:  2px solid #FF9C7B;
+            transition: background-color .2s, color .2s;
+            &:hover {
+              background-color: #FF9C7B;
+              color: #FFF;
+            }
+          }
+        }
+      }
+      h5 {
+        text-align: center;
+        margin-bottom: 4em;
+        font-size: 2em;
+      }
+    }
+  }
+  @media only screen and (min-width: 750px) {
+    .recipes .card {
+      &:hover {
+        transform: translateX(-5em);
+      }
+    }
+  }
+  @media only screen and (max-width: 750px) {
+    .recipes {
+      .container {
+        width: 70%;
+      }
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .recipes {
+      .container {
+        .card .infos {
+          padding: .8em 0em 2.3em 0em;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
