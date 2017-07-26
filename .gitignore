@@ -23,3 +23,8 @@
 # Ignore local_env file : file which all servers vars
 /config/local_env.yml
 config/local_env.yml
+
+# Ignore all DS_Stores
+*/.DS_Store
+/.DS_Store
+.DS_Store
