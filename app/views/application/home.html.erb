@@ -1,0 +1,67 @@
+<section id="index">
+  <div class="head">
+    <h1>Découvrez<br>les meilleurs plats<br>traditionnels Bordelais</h1>
+    <% content_for :title, "Trad'Food | Manger et cuisiner traditionnel à Bordeaux" %>
+  </div>
+  <div class="search">
+
+    <%= form_tag(city_filter_url('bordeaux'), class: 'search-bar') do %>
+      <div class="field for-type">
+        <%= label_tag 'menu' , 'Menu' %>
+        <%= select_tag(:menu, options_for_select(filter_array['menu'], params[:menu] ||= 'all')) %>
+      </div>
+      <div class="field for-type">
+        <%= label_tag 'season' , 'Saison' %>
+        <%= select_tag(:season, options_for_select(filter_array['season'], params[:season] ||= 'all')) %>
+      </div>
+      <div class="field for-type">
+        <%= label_tag 'difficulty' , 'Difficulté' %>
+        <%= select_tag(:difficulty, options_for_select(filter_array['difficulty'], params[:difficulty].to_i ||= 'all')) %>
+      </div>
+      <%= submit_tag 'Rechercher', class: 'button' %>
+    <% end %>
+
+  </div>
+  <div class="concept">
+    <h3><em>Le concept</em></h3>
+    <div class="container">
+      <div class="paragraph">
+        <p>Trad’ Food est une plateforme en ligne ouverte à tous. <br>
+        Elle vous permet, que vous soyez locaux ou touristes, de découvrir ou de redécouvrir, les recettes les plus emblématiques du terroir bordelais. </p>
+        <p>Avec un panel de recettes triées par difficultés, saisons, et types de plats, le site vous propose de réaliser par vous même les recettes bordelaises qui font la richesse gastronomique de la région bordelaise.</p>
+      </div>
+    </div>
+  </div>
+  <div class="cases top-recipes">
+    <h3><em>Les tendances</em></h3>
+    <div class="container">
+			<% @recipes.where(:highlight => true).limit(3).each do |recipe| %>
+				<%= link_to slugify(recipe.name) do %>
+					<div class="bloc">
+						<div class="on-hover">
+              <div class="infos">
+                <ul>
+    							<li><strong><%= recipe.name %></strong></li>
+    						</ul>
+              </div>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+    </div>
+  </div>
+  <div class="cases random-recipes">
+    <h3><em>Les recettes à l'affiche</em></h3>
+    <div class="container">
+			<% @recipes.limit(12).reverse.each do |recipe| %>
+				<%= link_to slugify(recipe.name) do %>
+					<div class="bloc">
+						<div class="on-hover">
+              <span><em><%= recipe.name %></em></span>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+    </div>
+  </div>
+</section>

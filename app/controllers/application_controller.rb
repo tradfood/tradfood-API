@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   def home
+    @recipes = Recipe.where(:publish => true)
   end
 
   def about
