@@ -57,6 +57,7 @@
           background-color: #FFF;
           margin-top: 6.95em;
           float: right;
+          right: -1px;
           h3 {
             font-weigth: 500;
             color: #424242;
@@ -82,14 +83,14 @@
               background-repeat: no-repeat;
               background-position: center;
               &.star {
-                background-image: url("https://s3.eu-central-1.amazonaws.com/bastienrobert/codepen/card-tradfood/004-star-1.svg");
+                background-image: image-url("icons/star.svg");
                 margin-left: 0;
               }
               &.leaf {
-                background-image: url("https://s3.eu-central-1.amazonaws.com/bastienrobert/codepen/card-tradfood/003-leaf.svg");
+                background-image: image-url("icons/leaf.svg");
               }
               &.cook {
-                background-image: url("https://s3.eu-central-1.amazonaws.com/bastienrobert/codepen/card-tradfood/002-food.svg");
+                background-image: image-url("icons/cook.svg");
               }
             }
           }
