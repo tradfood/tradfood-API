@@ -25,3 +25,10 @@ en:
     actions:
       show_in_app_custom:
         menu: "Show in app"
+    help:
+      city:
+        name: "Required. Automatic downcase. Don't put '-' !"
+      recipe:
+        name: "Required. Automatic downcase. Don't put '-' !"
+        recipe: "Required. Markdown editor."
+        ingredients: "Required. Markdown editor."
