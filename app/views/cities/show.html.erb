@@ -1,38 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @city.name.titleize %>
-</p>
+<% content_for :title, pageTitle = "Recettes sur " + @city.name.titleize %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @city.description %>
-</p>
-
-<p>
-  <strong>Highlight:</strong>
-  <%= @city.highlight %>
-</p>
-
-<p>
-  <strong>Publish:</strong>
-  <%= @city.publish %>
-</p>
-
-<h1>Recipes</h1>
-
-<%= form_tag do %>
-  <%= select_tag(:difficulty, options_for_select(filter_array['difficulty'], params[:difficulty].to_i ||= 'all')) %>
-  <%= select_tag(:season, options_for_select(filter_array['season'], params[:season] ||= 'all')) %>
-  <%= select_tag(:menu, options_for_select(filter_array['menu'], params[:menu] ||= 'all')) %>
-  <%= submit_tag 'Rechercher' %>
-<% end %>
-
-<ul>
-  <% @recipes.each do |recipe| %>
-    <li><%= link_to recipe.name.capitalize, recipe_path(slugify(@city.name), slugify(recipe.name)) %></li>
-  <% end %>
-</ul>
-
-<%= link_to 'Back', cities_path %>
+<section class="city">
+  <div class="head">
+    <h1><%= pageTitle %></h1>
+  </div>
+  <div class="search">
+    <%= form_tag(city_filter_url('bordeaux'), class: 'search-bar') do %>
+      <div class="field for-type">
+        <%= label_tag 'menu' , 'Menu' %>
+        <%= select_tag(:menu, options_for_select(filter_array['menu'], params[:menu] ||= 'all')) %>
+      </div>
+      <div class="field for-type">
+        <%= label_tag 'season' , 'Saison' %>
+        <%= select_tag(:season, options_for_select(filter_array['season'], params[:season] ||= 'all')) %>
+      </div>
+      <div class="field for-type">
+        <%= label_tag 'difficulty' , 'Difficulté' %>
+        <%= select_tag(:difficulty, options_for_select(filter_array['difficulty'], params[:difficulty].to_i ||= 'all')) %>
+      </div>
+      <%= submit_tag 'Rechercher', class: 'button' %>
+    <% end %>
+  </div>
+  <h2><%= @city.name.titleize %></h2>
+  <div class="recipes">
+    <div class="container">
+      <% if @recipes %>
+        <% @recipes.each do |recipe| %>
+          <div class="card">
+            <div class="content" style="background-image: url(<%= recipe.image %>)">
+              <div class="infos">
+                <h3><%= recipe.name.capitalize %></h3>
+                <div class="details">
+                  <span class="icon star"></span><b><%= difficulty?(recipe.difficulty) %></b>
+                  <span class="icon leaf"></span><b><%= season?(recipe.season) %></b>
+                  <span class="icon cook"></span><b><%= recipe.cooking_time.strftime('%kh%M') %></b>
+                </div>
+                <%= link_to 'Voir la recette', recipe_path(slugify(@city.name), slugify(recipe.name)) %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <% else %>
+          <h5>Aucun résultat</h5>
+      <% end %>
+    </div>
+  </div>
+</section>

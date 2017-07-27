@@ -1,58 +1,17 @@
-<p id="notice"><%= notice %></p>
+<% content_for :title, "Recette " + @recipe.name.titleize + " | Trad'Food, manger et cuisiner" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @recipe.name.capitalize %>
-</p>
-
-<p>
-  <strong>Ingredients:</strong>
-  <%= @recipe.ingredients %>
-</p>
-
-<p>
-  <strong>Recipe:</strong>
-  <%= @recipe.recipe %>
-</p>
-
-<p>
-  <strong>Preparation time:</strong>
-  <%= @recipe.preparation_time %>
-</p>
-
-<p>
-  <strong>Cooking time:</strong>
-  <%= @recipe.cooking_time %>
-</p>
-
-<p>
-  <strong>Meal type:</strong>
-  <%= @recipe.meal_type %>
-</p>
-
-<p>
-  <strong>Difficulty:</strong>
-  <%= @recipe.difficulty %>
-</p>
-
-<p>
-  <strong>Season:</strong>
-  <%= @recipe.season %>
-</p>
-
-<p>
-  <strong>Highlight:</strong>
-  <%= @recipe.highlight %>
-</p>
-
-<p>
-  <strong>Publish:</strong>
-  <%= @recipe.publish %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @recipe.city.name %>
-</p>
-
-<%= link_to 'Back to city_path', city_path(slugify(@recipe.city.name)) %>
+<section id="recipe">
+  <h1><%= @recipe.name.titleize %></h1>
+  <a href="#" class="arrow left"></a>
+  <div class="container">
+    <%= image_tag @recipe.image, :class => "logo__img column-center", :alt => @recipe.name.titleize %>
+    <div class="right">
+      <h2>Ingrédients</h2>
+        <%= @recipe.ingredients %>
+      <hr>
+      <h2>Recette</h2>
+      <%= @recipe.recipe %>
+    </div>
+  </div>
+  <a href="#" class="arrow right"></a>
+</section>
