@@ -7,10 +7,10 @@
     <%= image_tag @recipe.image, :class => "logo__img column-center", :alt => @recipe.name.titleize %>
     <div class="right">
       <h2>Ingrédients</h2>
-        <%= @recipe.ingredients %>
+        <%= markdown(@recipe.ingredients) %>
       <hr>
       <h2>Recette</h2>
-      <%= @recipe.recipe %>
+      <%= markdown(@recipe.recipe) %>
     </div>
   </div>
   <a href="#" class="arrow right"></a>
