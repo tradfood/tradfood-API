@@ -28,6 +28,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use carrierwave for image management
 gem 'carrierwave'
+# Use Redcarpet to convert markdown to HTML
+gem 'redcarpet'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
