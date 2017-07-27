@@ -31,8 +31,10 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar true
 
+  # List of custom actions
   custom_model_array = [City, Recipe]
 
+  # List of actions
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
@@ -55,6 +57,7 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+  # Authentication code (by .htaccess)
   config.authorize_with do
     authenticate_or_request_with_http_basic('Site Message') do |username, password|
       username == ENV["ADMIN_LOGIN"] && password == ENV["ADMIN_PASSWORD"]
