@@ -13,20 +13,19 @@
     <%= favicon_link_tag 'favicon.png' %>
 
     <!-- Socials -->
-    <% cardimage = image_path('logo-orange.svg') %>
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:title" content="<%= yield(:title) %>">
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta name="twitter:creator" content="@bastienrbt">
-    <meta name="twitter:image" content="<%= cardimage %>">
+    <meta name="twitter:image" content="<%= image_path(DEFAULT_META["meta_image"]) %>">
     <meta name="twitter:image:alt" content="Trad'Food, les meilleurs plats traditionnels de Bordeaux">
     <!-- Facebook -->
     <meta property="og:title" content="<%= yield(:title) %>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<%= request.original_url %>" />
-    <meta property="og:image" content="<%= cardimage %>">
+    <meta property="og:image" content="<%= image_path(DEFAULT_META["meta_image"]) %>">
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta property="og:email" content="contact@tradfood.fr">
     <!-- End of Socials -->
