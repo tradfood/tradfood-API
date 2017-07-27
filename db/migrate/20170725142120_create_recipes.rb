@@ -7,8 +7,8 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
       # Recipe text
       t.text :recipe
       # Times in minutes
-      t.integer :preparation_time
-      t.integer :cooking_time
+      t.time :preparation_time
+      t.time :cooking_time
       # starter, MC (Main course) or dessert
       t.string :meal_type
       # Between 1 & 3
