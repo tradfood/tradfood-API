@@ -1,4 +1,6 @@
-<% content_for :title, "Recette " + @recipe.name.titleize + " | Trad'Food, manger et cuisiner" %>
+<% content_for :title, "Recette " + @recipe.name.titleize + " | Trad'Food" %>
+<% content_for :meta_description, @recipe.description %>
+<% content_for :meta_image, @recipe.image %>
 
 <section id="recipe">
   <h1><%= @recipe.name.titleize %></h1>

@@ -1,6 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <% content_for :title, pageTitle = "Recettes sur " + @city.name.titleize %>
+<% content_for :meta_description, @city.description %>
+<% content_for :meta_image, @city.image %>
+
+<p id="notice"><%= notice %></p>
 
 <section class="city">
   <div class="head">

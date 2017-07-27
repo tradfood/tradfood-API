@@ -2,6 +2,8 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
   def change
     create_table :recipes do |t|
       t.string :name
+      # Description : only for meta
+      t.text :description
       # Ingredients JSON array
       t.text :ingredients
       # Recipe text

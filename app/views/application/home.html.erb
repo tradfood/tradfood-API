@@ -1,3 +1,5 @@
+<% content_for :title, "Trad'Food, manger et cuisiner traditionnel à Bordeaux" %>
+
 <section id="index">
   <div class="head">
     <h1>Découvrez<br>les meilleurs plats<br>traditionnels Bordelais</h1>
@@ -36,7 +38,7 @@
     <h3><em>Les tendances</em></h3>
     <div class="container">
 			<% @recipes.where(:highlight => true).limit(3).each do |recipe| %>
-				<%= link_to slugify(recipe.name) do %>
+				<%= link_to recipe_path(slugify(recipe.city.name), slugify(recipe.name)) do %>
 					<div class="bloc" style="background-image: url(<%= recipe.image_url %>)">
 						<div class="on-hover">
               <div class="infos">
@@ -54,7 +56,7 @@
     <h3><em>Les recettes à l'affiche</em></h3>
     <div class="container">
 			<% @recipes.limit(12).reverse.each do |recipe| %>
-				<%= link_to slugify(recipe.name) do %>
+				<%= link_to recipe_path(slugify(recipe.city.name), slugify(recipe.name)) do %>
 					<div class="bloc" style="background-image: url(<%= recipe.image_url %>)">
 						<div class="on-hover">
               <span><em><%= recipe.name %></em></span>

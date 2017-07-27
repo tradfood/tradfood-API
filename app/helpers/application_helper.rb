@@ -1,6 +1,11 @@
 module ApplicationHelper
   include SlugHelper
 
+  # Get default URL host
+  def default_url_options
+    { host: ENV['HOST'] || 'localhost:3000' }
+  end
+
   # Markdown method using Redcarpet Gem : convert Markdown to HTML
   def markdown(text)
     options = {
@@ -22,5 +27,5 @@ module ApplicationHelper
 
     markdown.render(text).html_safe
   end
-  
+
 end

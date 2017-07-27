@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title>Trad'Food | Manger et cuisiner traditionnel à Bordeaux</title> -->
     <title><%= yield(:title) %></title>
-    <meta name="description" content="Découvrez ou redécouvrez avec Trad'Food les meilleurs plats traditionnels de Bordeaux. Alliez l'utile à l'agréable avec nos recettes et nos conseils de vins">
+    <meta name="description" content="<%= meta_description %>">
     <meta name="keywords" content="Recettes,Cuisiner,Bordeaux,Gironde">
 
     <meta name="author" content="Bastien ROBERT">
@@ -15,18 +15,19 @@
     <!-- Socials -->
     <% cardimage = image_path('logo-orange.svg') %>
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@tradfood">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:title" content="<%= yield(:title) %>">
-    <meta name="twitter:description" content="Découvrez avec Trad'Food les meilleurs plats traditionnels de Bordeaux.">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:creator" content="@bastienrbt">
     <meta name="twitter:image" content="<%= cardimage %>">
     <meta name="twitter:image:alt" content="Trad'Food, les meilleurs plats traditionnels de Bordeaux">
     <!-- Facebook -->
     <meta property="og:title" content="<%= yield(:title) %>">
-    <meta property="og:type" content="restaurant">
-    <meta property="og:url" content="https://tradfood.fr/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= request.original_url %>" />
     <meta property="og:image" content="<%= cardimage %>">
-    <meta property="og:description" content="Découvrez avec Trad'Food les meilleurs plats traditionnels de Bordeaux">
+    <meta name="twitter:description" content="<%= meta_description %>">
     <meta property="og:email" content="contact@tradfood.fr">
     <!-- End of Socials -->
 
