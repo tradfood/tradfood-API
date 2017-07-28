@@ -6,7 +6,7 @@ class ApplicationRecord < ActiveRecord::Base
     # Downcase the name
     self.name.downcase!
     # Remove - if there is for the slug compatibility
-    self.name = self.name.gsub('-', ' ')
+    self.name = self.name.tr('-', ' ')
   end
 
 end
