@@ -1,6 +1,6 @@
-<% if current_page?(root_path) || current_page?(city_path) %>
+<% begin current_page?(root_path) || current_page?(city_path) %>
   <header id="home">
-<% else %>
+<% rescue %>
   <header>
 <% end %>
    <div class="row">
