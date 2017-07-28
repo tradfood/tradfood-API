@@ -4,8 +4,8 @@
 
 <article id="recipe" itemscope itemtype="http://schema.org/Article">
   <h1 itemprop="name"><%= @recipe.name.titleize %></h1>
-  <a href="#" class="arrow left"></a>
-  <div class="container">
+  <a href="#" class="arrow left" rel="preview"></a>
+  <div class="container" itemprop="articleBody">
     <%= image_tag @recipe.image, :class => "logo__img column-center", :alt => @recipe.name.titleize %>
     <div class="right" itemprop="description">
       <h2>Ingrédients</h2>
@@ -15,5 +15,5 @@
       <%= markdown(@recipe.recipe) %>
     </div>
   </div>
-  <a href="#" class="arrow right"></a>
+  <a href="#" class="arrow right" rel="next"></a>
 </article>
