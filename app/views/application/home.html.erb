@@ -42,7 +42,7 @@
 						<div class="on-hover">
               <div class="infos">
                 <ul>
-    							<li><strong><%= recipe.name %></strong></li>
+    							<li><strong><%= recipe.name.titleize %></strong></li>
     						</ul>
               </div>
 						</div>
@@ -58,7 +58,7 @@
 				<%= link_to recipe_path(slugify(recipe.city.name), slugify(recipe.name)) do %>
 					<div class="bloc" style="background-image: url(<%= recipe.image_url %>)">
 						<div class="on-hover">
-              <span><em><%= recipe.name %></em></span>
+              <span><em><%= recipe.name.titleize %></em></span>
 						</div>
 					</div>
 				<% end %>
