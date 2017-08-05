@@ -31,3 +31,7 @@ config/local_env.yml
 
 # Ignore files uploaded by CarrierWave
 /public/uploads/*
+
+# Ignore :memory database for tests
+/:memory
+:memory
