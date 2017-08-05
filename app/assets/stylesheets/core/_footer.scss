@@ -1,0 +1,23 @@
+footer {
+  display: flex;
+  margin-top: 2em;
+  padding: 2em 0;
+  border-top: 1px solid #E4E4E4;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-size: .8em;
+  color: #424242;
+  .right a {
+    color: #424242;
+  }
+  .right :first-child {
+    padding-right: .5em;
+    vertical-align: middle;
+  }
+  .right .social-icons img {
+    height: 1.2em;
+    vertical-align: middle;
+    padding: 0 .3em;
+  }
+}
