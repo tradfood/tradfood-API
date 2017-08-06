@@ -1,4 +1,5 @@
 # Trad'Food
+[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=tradfood.fr)](https://tradfood.fr)
 [![Code Climate](https://codeclimate.com/github/bastienrobert/TradFood/badges/gpa.svg)](https://codeclimate.com/github/bastienrobert/TradFood)
 [![Build Status](https://travis-ci.org/bastienrobert/TradFood.svg?branch=master)](https://travis-ci.org/bastienrobert/TradFood)
 
