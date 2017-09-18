@@ -19,8 +19,10 @@
       </div>
       <div class="publisher" itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
         <div itemprop="name">TradFood</div>
-        <div itemprop="logo">
-          <%= image_tag image_path('logo-orange.svg') %>
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+          <%= image_tag "https://tradfood.fr" + image_path('logo-orange.svg'), :itemprop => "url" %>
+          <meta itemprop="width" content="750">
+          <meta itemprop="height" content="170">
         </div>
       </div>
       <div class="datePublished" itemprop="datePublished">
