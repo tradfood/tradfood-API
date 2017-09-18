@@ -17,8 +17,11 @@
       <div class="author" itemprop="author">
         TradFood
       </div>
-      <div class="publisher" itemprop="publisher">
-        TradFood
+      <div class="publisher" itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
+        <div itemprop="name">TradFood</div>
+        <div itemprop="logo">
+          <%= image_tag image_path('logo-orange.svg') %>
+        </div>
       </div>
       <div class="datePublished" itemprop="datePublished">
         <%= @recipe.created_at %>
