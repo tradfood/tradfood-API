@@ -14,6 +14,9 @@
     margin: -3em auto 4em;
     background-color: #FFF;
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    .schema-tags {
+      display: none;
+    }
     img {
       box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
       width: calc(3.5*(100%/8));

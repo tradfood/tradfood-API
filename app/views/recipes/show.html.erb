@@ -5,9 +5,29 @@
 <article id="recipe" itemscope itemtype="http://schema.org/Article">
   <h1 itemprop="name"><%= @recipe.name.titleize %></h1>
   <a href="#" class="arrow left" rel="preview"></a>
-  <div class="container" itemprop="articleBody">
-    <%= image_tag @recipe.image, :class => "logo__img column-center", :alt => @recipe.name.titleize %>
-    <div class="right" itemprop="description">
+  <div class="container" itemprop="mainEntityOfPage">
+    <%= image_tag @recipe.image, :class => "logo__img column-center", :alt => @recipe.name.titleize, :itemprop => 'image' %>
+    <div class="schema-tags">
+      <div class="headline" itemprop="headline">
+        <%= @recipe.name.titleize %>
+      </div>
+      <div class="description" itemprop="description">
+        <%= @recipe.description %>
+      </div>
+      <div class="author" itemprop="author">
+        TradFood
+      </div>
+      <div class="publisher" itemprop="publisher">
+        TradFood
+      </div>
+      <div class="datePublished" itemprop="datePublished">
+        <%= @recipe.created_at %>
+      </div>
+      <div class="dateModified" itemprop="dateModified">
+        <%= @recipe.updated_at %>
+      </div>
+    </div>
+    <div class="right" itemprop="articleBody">
       <h2>Ingrédients</h2>
         <%= markdown(@recipe.ingredients) %>
       <hr>
