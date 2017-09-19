@@ -226,7 +226,6 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
-  jquery-rails
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
