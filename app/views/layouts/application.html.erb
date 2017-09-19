@@ -39,6 +39,8 @@
     <!-- End of Apple touch -->
 
     <!-- AMP setup -->
+    <link rel="canonical" href="<%= url_for(format: :html, only_path: false) %>" >
+    <link rel="amphtml" href="<%= url_for(format: :amp, only_path: false) %>" >
     <% if Rails.application.assets && Rails.application.assets['amp/application'] %>
       <style amp-custom><%= Rails.application.assets['amp/application'].to_s.html_safe %></style>
     <% else %>
