@@ -19,5 +19,9 @@ module Tradfood
         ENV[key.to_s] = value
       end if File.exists?(env_file)
     end
+
+    # Precompile AMP stylesheet
+    config.assets.precompile << 'amp/application.scss'
+
   end
 end

@@ -38,6 +38,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <!-- End of Apple touch -->
 
+    <!-- AMP setup -->
+    <% if Rails.application.assets && Rails.application.assets['amp/application'] %>
+      <style amp-custom><%= Rails.application.assets['amp/application'].to_s.html_safe %></style>
+    <% else %>
+      <style amp-custom><%= File.read "#{Rails.root}/public#{stylesheet_path('amp/application', host: nil)}" %></style>
+    <% end %>
+    <!-- End of AMP setup -->
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -55,6 +63,6 @@
       ga('create', 'UA-86803918-1', 'auto');
       ga('send', 'pageview');
     </script>
-    
+
   </body>
 </html>

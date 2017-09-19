@@ -1,0 +1,4 @@
+<h1><%= @recipe.name.titleize %></h1>
+<amp-img src="<%= @recipe.image %>" layout="responsive" width="900" height="675"></amp-img>
+<p><%= markdown(@recipe.ingredients) %></p>
+<p><%= markdown(@recipe.recipe) %></p>
