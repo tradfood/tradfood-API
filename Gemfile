@@ -31,6 +31,8 @@ gem 'carrierwave'
 gem 'redcarpet'
 # Use critical path css to display initial page view style (speed-up loading)
 # gem 'critical-path-css-rails', '~> 1.0.0'
+# Use sitemap_generator to auto-generate the sitemap
+gem 'sitemap_generator'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
