@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>https://tradfood.fr/</loc>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/a-propos</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/cruchade-bordelaise</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/canneles</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/fougasse-nature</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/macarons-de-saint-emilion</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/entrecote-bordelaise</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/pibales</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/sauce-bordelaise</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/poelee-de-cepes</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tradfood.fr/bordeaux/roti-de-porc-a-la-vigneronne</loc>
+  <priority>0.80</priority>
+</url>
+</urlset>
