@@ -1,7 +1,7 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://tradfood.fr"
 
-SitemapGenerator::Sitemap.create do
+SitemapGenerator::Sitemap.create(:compress => false) do
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
