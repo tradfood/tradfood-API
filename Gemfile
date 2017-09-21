@@ -33,6 +33,8 @@ gem 'redcarpet'
 # gem 'critical-path-css-rails', '~> 1.0.0'
 # Use sitemap_generator to auto-generate the sitemap
 gem 'sitemap_generator'
+# Use whenever to add CRON tasks
+gem 'whenever'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
