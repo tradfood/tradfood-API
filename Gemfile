@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'carrierwave'
 # Use Redcarpet to convert markdown to HTML
 gem 'redcarpet'
+# Use Rollbar to catch errors
+gem 'rollbar'
 # Use critical path css to display initial page view style (speed-up loading)
 # gem 'critical-path-css-rails', '~> 1.0.0'
 # Use sitemap_generator to auto-generate the sitemap
