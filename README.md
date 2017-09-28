@@ -46,6 +46,6 @@ $ dokku apps:create tradfood
 $ dokku psql:create tradfood
 $ dokku psql:link tradfood tradfood
 # Add to your dev repo'clone
-git remote add dokku dokku@YOUR-SERVER-IP:YOUR-RAILS-APP-NAME
-git push dokku master
+$ git remote add dokku dokku@YOUR-SERVER-IP:YOUR-RAILS-APP-NAME
+$ git push dokku master
 ```
