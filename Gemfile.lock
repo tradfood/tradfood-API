@@ -100,6 +100,9 @@ GEM
     pg (0.20.0)
     puma (3.9.1)
     rack (2.0.3)
+    rack-attack (5.0.1)
+      rack
+    rack-cors (1.0.1)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
       rack (>= 1.1)
@@ -236,6 +239,8 @@ DEPENDENCIES
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
+  rack-attack
+  rack-cors
   rails (~> 5.0.3)
   rails-erd
   rails_12factor
@@ -259,4 +264,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.0.pre.3

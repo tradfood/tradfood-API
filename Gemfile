@@ -39,6 +39,10 @@ gem 'sitemap_generator'
 gem 'whenever'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
+# Use rack CORS to enable CORS request
+gem 'rack-cors', :require => 'rack/cors'
+# Preventing API for abuse
+gem 'rack-attack'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

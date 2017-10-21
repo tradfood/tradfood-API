@@ -22,6 +22,8 @@ module Tradfood
 
     # Precompile AMP stylesheet
     config.assets.precompile << 'amp/application.scss'
+    # Preventing API attacks
+    config.middleware.use Rack::Attack
 
   end
 end
