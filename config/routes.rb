@@ -10,10 +10,10 @@ Rails.application.routes.draw do
 
   # Cities
   get '/villes', to: 'cities#index', as: :cities
-  get '/:name', to: 'cities#show', as: :city
-  post '/:name', to: 'cities#filter', as: :city_filter
+  get '/:slug', to: 'cities#show', as: :city
+  post '/:slug', to: 'cities#filter', as: :city_filter
 
   # Recipes on cities
-  get '/:city_name/:name', to: 'recipes#show', as: :recipe
+  get '/:city_slug/:slug', to: 'recipes#show', as: :recipe
 
 end

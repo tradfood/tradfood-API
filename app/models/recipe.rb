@@ -1,7 +1,6 @@
 class Recipe < ApplicationRecord
   belongs_to :city
   mount_uploader :image, ImageUploader
-  before_save :name_downcase!
 
   def meal_type_enum
     [['Entrée', 'starter'],['Plat', 'main course'],['Dessert', 'dessert']]

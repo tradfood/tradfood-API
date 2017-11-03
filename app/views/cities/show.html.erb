@@ -39,7 +39,7 @@
                   <span class="icon leaf"></span><b><%= season?(recipe.season) %></b>
                   <span class="icon cook"></span><b><%= recipe.cooking_time.strftime('%kh%M') %></b>
                 </div>
-                <%= link_to 'Voir la recette', recipe_path(slugify(@city.name), slugify(recipe.name)) %>
+                <%= link_to 'Voir la recette', recipe_path(@city.slug, recipe.slug) %>
               </div>
             </div>
           </div>

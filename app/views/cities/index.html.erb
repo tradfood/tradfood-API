@@ -21,7 +21,7 @@
         <td><%= city.description %></td>
         <td><%= city.highlight %></td>
         <td><%= city.publish %></td>
-        <td><%= link_to 'Show', city_path(slugify(city.name)) %></td>
+        <td><%= link_to 'Show', city_path(city.slug) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -46,7 +46,7 @@
         <td><%= city.description %></td>
         <td><%= city.highlight %></td>
         <td><%= city.publish %></td>
-        <td><%= link_to 'Show', city_path(slugify(city.name)) %></td>
+        <td><%= link_to 'Show', city_path(city.slug) %></td>
       </tr>
     <% end %>
   </tbody>

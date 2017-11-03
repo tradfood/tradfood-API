@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
-      @recipe = Recipe.where(:name => unslugify(params[:name])).first
+      @recipe = Recipe.where(:slug => params[:slug]).first
     end
 
 end

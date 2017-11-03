@@ -1,8 +1,5 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
-  # Include SlugHelper to get slug model name
-  include SlugHelper
-
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
@@ -46,7 +43,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
-    "#{slugify(model.name)}.jpg" if original_filename
+    "#{model.slug}.jpg" if original_filename
   end
 
 end

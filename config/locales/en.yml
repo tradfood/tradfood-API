@@ -26,9 +26,6 @@ en:
       show_in_app_custom:
         menu: "Show in app"
     help:
-      city:
-        name: "Required. Automatic downcase. Don't put '-' !"
       recipe:
-        name: "Required. Automatic downcase. Don't put '-' !"
         recipe: "Required. Markdown editor. <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>Markdown-Cheatsheet</a>"
         ingredients: "Required. Markdown editor. <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>Markdown-Cheatsheet</a>"

@@ -1,5 +1,4 @@
 module ApplicationHelper
-  include SlugHelper
 
   # Get default URL host
   def default_url_options

@@ -31,8 +31,7 @@ class CitiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_city
-      city_name = unslugify(params[:name])
-      @city = City.where(:name => city_name).first
+      @city = City.where(:slug => params[:slug]).first
     end
 
     def set_recipe
