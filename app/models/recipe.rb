@@ -11,7 +11,11 @@ class Recipe < ApplicationRecord
   end
 
   def season_enum
-    [['Hiver', 'winter'],['Printemps', 'srping'],['Été', 'summer'],['Automne', 'automn']]
+    [['Hiver', 'winter'],['Printemps', 'spring'],['Été', 'summer'],['Automne', 'automn']]
+  end
+
+  def serving_type_enum
+    [['Personnes', 'peoples'],['Pièces', 'servings']]
   end
 
 end
