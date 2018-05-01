@@ -1,7 +1,7 @@
 # Trad'Food
 [![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=tradfood.fr)](https://tradfood.fr)
 [![Code Climate](https://codeclimate.com/github/bastienrobert/TradFood/badges/gpa.svg)](https://codeclimate.com/github/bastienrobert/TradFood)
-[![Build Status](https://travis-ci.org/bastienrobert/TradFood.svg?branch=master)](https://travis-ci.org/bastienrobert/TradFood)
+[![Build Status](https://travis-ci.org/tradfood/tradfood-API.svg?branch=master)](https://travis-ci.org/tradfood/tradfood-API)
 
 ## What's Trad'Food
 Trad'Food is a student project, made @ IUT Bordeaux Montaigne, and developed with <3 by Bastien Robert.
