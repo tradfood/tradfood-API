@@ -1,7 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: :show
 
-  # GET /recipes/1
   # GET /recipes/1.json
   def show
   end
